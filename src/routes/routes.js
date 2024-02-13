@@ -4,11 +4,11 @@ const {
 	validateCreate,
 	validateDelete,
 	validateGetWithQueryStrings,
-} = require("../middlewares/validators/user");
+} = require("../validators/user");
 
 const {
 	validateCreatePedido,
-} = require("../middlewares/validators/pedido");
+} = require("../validators/pedido");
 
 const {
 	deleteUser,
@@ -28,8 +28,8 @@ const {
 	updatePedido,
 } = require("../controllers/Pedido");
 
-const { verifyToken } = require("../middlewares/verifyToken");
-const { verifyIsAdmin } = require("../middlewares/verifyIsAdmin");
+const { verifyToken } = require("../validators/verifyToken");
+const { verifyIsAdmin } = require("../validators/verifyIsAdmin");
 
 const router = express.Router();
 

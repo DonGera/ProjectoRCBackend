@@ -5,7 +5,7 @@ const {
 	validationResult,
 } = require("express-validator")
 
-const validateCreateCourse = [
+const validateCreatePedido = [
 	check("title")
 		.exists()
 		.notEmpty()
@@ -49,7 +49,7 @@ const validateGetWithQueryStrings = [
 ] 
 
 module.exports = {
-	validateCreateCourse,
+	validateCreatePedido,
 	validateDelete,
 	validateGetWithQueryStrings,
 }

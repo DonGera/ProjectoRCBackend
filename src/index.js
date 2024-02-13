@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-require("./database/database");
+require("./database");
 
 const routes = require("./routes/routes");
 
@@ -16,8 +16,10 @@ app.use(express.json());
 
 app.use("/api", routes);
 
-app.listen(process.env.PORT, () =>
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () =>
 	console.log(
-		(`Server on port ${process.env.PORT}`)
+		(`Server on port ${PORT}`)
 	)
 );
